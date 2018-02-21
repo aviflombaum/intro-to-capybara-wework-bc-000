@@ -1,6 +1,6 @@
 # Write your code here!
 require 'bundler'
-Bundler.requ
+Bundler.require
 
 require_relative './app'
 

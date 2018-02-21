@@ -8,7 +8,7 @@ class Application < Sinatra::Base
   end
   
   post '/greet' do
-    params["email"].inspect
+    erb :greet
     
   end
 end

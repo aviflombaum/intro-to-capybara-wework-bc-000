@@ -12,7 +12,7 @@ class Application < Sinatra::Base
     
   end
   
-  get '/avg-price'
+  get '/avg-price' do
   
     require 'nokogiri'
     require 'open-uri'

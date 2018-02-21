@@ -11,4 +11,17 @@ class Application < Sinatra::Base
     erb :greet
     
   end
+  
+  get '/avg-price'
+  
+    require 'nokogiri'
+    require 'open-uri'
+
+    page = open("https://newyork.craigslist.org/search/aap").read
+    doc = Nokogiri::HTML(page)
+
+    prices = doc.search("span.result-price").collect{|e| e.text.gsub("$", "").to_i}
+
+    "The average price is #{prices.inject(:+)/prices.size}" 
+
 end

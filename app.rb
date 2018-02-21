@@ -23,5 +23,5 @@ class Application < Sinatra::Base
     prices = doc.search("span.result-price").collect{|e| e.text.gsub("$", "").to_i}
 
     "The average price is #{prices.inject(:+)/prices.size}" 
-
+  end
 end

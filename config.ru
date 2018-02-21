@@ -1,2 +1,2 @@
 # Write your code here!
-run A
+run Application

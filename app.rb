@@ -8,7 +8,7 @@ class Application < Sinatra::Base
   end
   
   post '/greet' do
-    params.inspect
+    params["name"].inspect
     
   end
 end
